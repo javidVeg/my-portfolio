@@ -1,0 +1,14 @@
+.about-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-card-cover {
+    height: 150px;
+    width: 100%;
+}
+
+.about-card-content {
+    /* Take available height */
+    flex: 1;
+}

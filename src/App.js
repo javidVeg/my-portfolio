@@ -7,11 +7,11 @@ import Memoji from './Memoji/Memoji';
 function App() {
 
   return (
-    <div>
-      <div className='main'>
+    <div className='main'>
+      <div >
         <Memoji />
       </div>
-      <div>
+      <div className='flex items-center justify-center mt-10'>
         <AboutMe />
       </div>
     </div>

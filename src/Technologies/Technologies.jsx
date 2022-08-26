@@ -11,15 +11,18 @@ import './Technologies.css'
 
 const Technologies = () => {
     return (
-        <div className='container'>
-            <div className="tech-card">
-                <img width={100} src={css} alt="css" />
-                <img width={100} src={html} alt="css" />
-                <img width={100} src={js} alt="css" />
-                <img width={100} src={react} alt="css" />
-                <img width={100} src={mui} alt="css" />
-                <img width={100} src={tw} alt="css" />
-                <img width={100} src={node} alt="css" />
+        <div className='tech-container'>
+                <div className='container-title'>
+                    <h1>#Technologies</h1>
+                </div>
+            <div className="tech-card gap-10">
+                <img width={120} src={css} alt="css" />
+                <img width={120} src={html} alt="css" />
+                <img width={120} src={js} alt="css" />
+                <img width={150} src={react} alt="css" />
+                <img width={150} src={mui} alt="css" />
+                <img width={150} src={tw} alt="css" />
+                <img width={120} src={node} alt="css" />
             </div>
         </div>
     )

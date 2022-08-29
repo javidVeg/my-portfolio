@@ -42,3 +42,19 @@
     
   
 }
+
+.project-divider{
+    border-top: 3px solid;
+    border-radius: 8px;
+  
+    color: grey;
+}
+
+@media only screen and (max-width: 760px){
+    .project-card{
+        flex-direction: column;
+    }
+    .project-card h1{
+        width: 80%;
+    }
+}

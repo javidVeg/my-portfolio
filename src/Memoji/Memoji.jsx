@@ -19,7 +19,7 @@ const Memoji = () => {
                     <span className=' text-slate-500'>&lt;</span><span className=' text-emerald-500'>DavidMartinez</span><span className=' text-slate-500'>/&gt;</span>
                 </h1>
             </div>
-            <div className='-mt-2 ml-12 role grid grid-rows-2 '>
+            <div className='-mt-2 ml-12 role grid grid-rows-2 md:ml-24 '>
                 <h1>
                     Front-End Developer
                 </h1>
@@ -28,16 +28,16 @@ const Memoji = () => {
                 </p>
                 <div className='flex flex-row mt-3'>
                     <div >
-                        <BsLinkedin size={25} />
+                        <a href="https://www.linkedin.com/in/davidandrewmartinez/"><BsLinkedin size={25} /></a>
                     </div>
                     <div className='mx-5'>
-                        <BsGithub size={25} />
+                        <a href="https://github.com/javidVeg"><BsGithub size={25} /></a>
                     </div>
                     <div >
-                        <BsMailbox2 size={25} />
+                        <a href="mailto: javidx24@icloud.com"><BsMailbox2 size={25} /></a>
                     </div>
                     <div >
-                        <RiFilePaper2Fill className='mx-5' size={25} />
+                        <a href='https://drive.google.com/file/d/1VexLXFt26oA4R8A7GNfOUuWZVHG3u5ts/view?usp=sharing'><RiFilePaper2Fill className='mx-5' size={25} /></a>
                     </div>
                 </div>
 

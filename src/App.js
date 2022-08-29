@@ -4,8 +4,8 @@ import './App.css';
 import Memoji from './Memoji/Memoji';
 import Projects from './Projects/Projects';
 import Footer from './Footer/Footer';
-
 import Technologies from './Technologies/Technologies';
+import MilPhotos from './MilPhotos/MilPhotos';
 
 function App() {
 
@@ -17,6 +17,9 @@ function App() {
       <div className='flex items-center justify-center mt-10'>
         <AboutMe />
       </div >
+      {/* <div>
+        <MilPhotos />
+      </div> */}
       <div>
         <Technologies/>
       </div>

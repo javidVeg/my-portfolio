@@ -7,9 +7,9 @@ const AboutMe = () => {
             <div className=" right"></div>
             <div className='left'>
                 <div className='content'>
-                    <h1>About Me</h1>
+                    <h1 className=' font-bold'>About Me</h1>
                     <p >
-                        This is a card with words about me and words about things i do to make me look good and i look good all the time but i type hella slow but thats okay because im sure that picaso didnt paint fast and that dude created some master peices like the one im creating now with my portfolio but its not done yet because im typing this so i can have words to fill up a card.
+                    Innovation and creation are the two things that EXCITE me!  Saturating myself in the world of Tech and Software Development has allowed me to be part of this rapidly changing world and I could not be more grateful. For the last 12 years I have served as an infantryman in the United States Army and have traveled the world in my most recent position as a Congressional Travel Escort. For the last year I have dedicated all my spare time to learning how to code and now that my time in the Army is coming to an end, I am ready to join the work force as a Frontend Developer!
                     </p>
                 </div>
             </div>

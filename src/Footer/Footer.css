@@ -1,15 +1,16 @@
-.footer{
+.footer {
     width: 100%;
     height: 50vh;
-    background-color:  rgb(59, 59, 59);
+    background-color: rgb(59, 59, 59);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-   
+
 }
-.footer-container{
-    
+
+.footer-container {
+
     width: 80%;
     min-height: 100%;
     display: grid;
@@ -19,42 +20,46 @@
     font-family: "Courier New", Courier, monospace;
 }
 
-.grid-item-1{
-    grid-column: 1;    
+.grid-item-1 {
+    grid-column: 1;
 }
 
-.grid-item-1 h1{
+.grid-item-1 h1 {
     font-size: 20px;
     font-weight: 800;
 }
-.grid-item-1 p{
+
+.grid-item-1 p {
     font-size: 16px;
     font-weight: 600;
     margin-top: 10px;
 }
 
-.grid-item-2{
+.grid-item-2 {
     grid-column: 2;
-    
+
 }
-.grid-item-2 h1{
+
+.grid-item-2 h1 {
     font-size: 20px;
     font-weight: 800;
 }
-.grid-item-2 p{
+
+.grid-item-2 p {
     font-size: 16px;
     font-weight: 600;
     margin-top: 10px;
 }
 
-.grid-item-3{
+.grid-item-3 {
     grid-column: 3;
     justify-self: center;
     align-self: center;
-    
+
 
 }
-.grid-item-4{
+
+.grid-item-4 {
     grid-column: 1/4;
     grid-row: 2/3;
     justify-self: center;
@@ -62,9 +67,26 @@
     padding: 10px;
     column-gap: 20px;
 }
-.divider{
+
+.divider {
     border-top: 3px solid;
     border-radius: 8px;
     width: 150px;
     color: grey;
+}
+
+@media only screen and (max-width: 760px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-item-3 {
+        margin-top: 15%;
+    }
 }

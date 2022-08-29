@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <div className='footer'>
             <div className='footer-container'>
-                <div className='grid-item-1 text-center mt-10 text-white '>
+                <div className='grid-item-1 text-center mt-10 text-white items-center flex flex-col '>
                     <div>
                         <h1>Navigation</h1>
                         <hr className='divider' />
@@ -24,9 +24,9 @@ const Footer = () => {
                         <h1>Find Me @</h1>
                         <hr className='divider' />
                     </div>
-                    <AiOutlineLinkedin  size={30} color="#BFDBFE" className='mt-3' />
-                    <FiGithub size={30} color="#DDD6FE" className='mt-3' />
-                    <FiTwitter size={30} color="#BAE6FD" className='twitter mt-3' />
+                    <a href='https://www.linkedin.com/in/davidandrewmartinez/'><AiOutlineLinkedin  size={35} color="#BFDBFE" className='mt-5' /></a>
+                    <a href='https://github.com/javidVeg'><FiGithub size={30} color="#DDD6FE" className='mt-5' /></a>
+                    
                 </div>
                 <div className='grid-item-3'>
                     <img src={memoji} alt="alt-memoji" width="150vw" />
@@ -35,7 +35,7 @@ const Footer = () => {
                     <div className='foot-left text-emerald-500'>
                         David Andrew Martinez &reg; {new Date().getFullYear()}
                     </div>
-                    <div className='foot-right' >
+                    <div className='foot-right text-center' >
                         Not created on Wordpress because thats lame..
                     </div>
                 </div>

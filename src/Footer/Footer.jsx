@@ -24,12 +24,12 @@ const Footer = () => {
                         <h1>Find Me @</h1>
                         <hr className='divider' />
                     </div>
-                    <AiOutlineLinkedin color="#2563EB" size={30} className='mt-3' />
-                    <FiGithub size={30} color="#A855F7" className='mt-3' />
-                    <FiTwitter size={30} color="#93C5FD" className='twitter mt-3' />
+                    <AiOutlineLinkedin  size={30} color="#BFDBFE" className='mt-3' />
+                    <FiGithub size={30} color="#DDD6FE" className='mt-3' />
+                    <FiTwitter size={30} color="#BAE6FD" className='twitter mt-3' />
                 </div>
                 <div className='grid-item-3'>
-                    <img src={memoji} alt="alt-memoji" width="250vw" />
+                    <img src={memoji} alt="alt-memoji" width="150vw" />
                 </div>
                 <div className='grid-item-4 text-white flex flex-row flex-wrap justify-center '>
                     <div className='foot-left text-emerald-500'>

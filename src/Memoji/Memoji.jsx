@@ -4,6 +4,7 @@ import './Memoji.css';
 import { BsLinkedin } from "react-icons/bs"
 import { BsGithub } from "react-icons/bs"
 import { BsMailbox2 } from "react-icons/bs"
+import { RiFilePaper2Fill } from "react-icons/ri"
 
 const Memoji = () => {
 
@@ -34,6 +35,9 @@ const Memoji = () => {
                     </div>
                     <div >
                         <BsMailbox2 size={25} />
+                    </div>
+                    <div >
+                        <RiFilePaper2Fill className='mx-5' size={25} />
                     </div>
                 </div>
 

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import AboutMe from './AboutMe/AboutMe';
 import './App.css';
 import Memoji from './Memoji/Memoji';
+import Projects from './Projects/Projects';
+import Footer from './Footer/Footer';
 
 import Technologies from './Technologies/Technologies';
 
@@ -17,6 +19,12 @@ function App() {
       </div >
       <div>
         <Technologies/>
+      </div>
+      <div>
+        <Projects/>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

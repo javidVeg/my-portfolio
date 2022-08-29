@@ -1,6 +1,5 @@
-.tech-container{
+.projects-container{
     width: 100%;
-    
     margin: 50px auto;
     display: flex;
     flex-direction: column;
@@ -9,7 +8,11 @@
     z-index: inherit;
 }
 
-.container-title{
+.projects-container img{
+    width: 80%;
+}
+
+.projects-title{
     display: flex;
     flex-direction: column;
     color: white;
@@ -18,25 +21,24 @@
     font-size: 5vw;
     z-index: 20;
 }
-.tech-card{
-    width: 70%;
+
+.project-card{
+    width: 80%;
     min-height: 100%;
-    background-color: rgb(59, 59, 59);
+    background-color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 30px;
-    border-radius: 8px;
     margin-bottom: 100px;
+    margin-top: 20px;
     z-index: 10;
 }
 
-@media only screen and (max-width: 760px){
+.project-card h1{
+    width: 30%;
     
-    .container-title{
-        font-size: 8vw;
-    }
-
+  
 }

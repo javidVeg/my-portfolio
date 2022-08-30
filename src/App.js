@@ -12,9 +12,9 @@ function App() {
 
   return (
     <div className='main'>
-      <div id="home">
+      {/* <div id="home">
         <Header/>
-      </div>
+      </div> */}
       <div className='-mt-24'>
         <Memoji />
       </div>

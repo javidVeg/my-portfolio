@@ -12,18 +12,15 @@ function App() {
 
   return (
     <div className='main'>
-      {/* <div id="home">
+      <div id="home">
         <Header/>
-      </div> */}
+      </div>
       <div className='-mt-24'>
         <Memoji />
       </div>
       <div id="about" className='flex items-center justify-center mt-10'>
         <AboutMe />
       </div >
-      {/* <div>
-        <MilPhotos />
-      </div> */}
       <div id="tech">
         <Technologies/>
       </div>

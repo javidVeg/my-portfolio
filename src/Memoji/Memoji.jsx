@@ -11,7 +11,7 @@ const Memoji = () => {
 
     return (
         <div>
-            <div className='grid place-items-center z-10'>
+            <div className='memoji grid place-items-center z-10'>
                 <img src={image1} alt="image1" />
             </div>
             <div className='name grid place-items-center '>
@@ -19,7 +19,7 @@ const Memoji = () => {
                     <span className=' text-slate-500'>&lt;</span><span className=' text-emerald-500'>DavidMartinez</span><span className=' text-slate-500'>/&gt;</span>
                 </h1>
             </div>
-            <div className='-mt-2 ml-12 role grid grid-rows-2 md:ml-24 '>
+            <div className='role -mt-2 ml-6 md:ml-12  grid grid-rows-2 lg:ml-24 '>
                 <h1>
                     Front-End Developer
                 </h1>

@@ -11,7 +11,7 @@ const Memoji = () => {
 
     return (
         <div>
-            <div className='grid place-items-center'>
+            <div className='grid place-items-center z-10'>
                 <img src={image1} alt="image1" />
             </div>
             <div className='name grid place-items-center '>

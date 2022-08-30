@@ -5,7 +5,7 @@ const MilPhotos = () => {
   return (
     <div className='mil-container'>
       <div className="mil-left"></div>
-      <div className='mil-right-text'><h1>From<br/>Boots</h1></div>
+      <div className='mil-right-text'><h1>From <br/>Boots</h1></div>
       <div className='mil-left-text'><h1>To<br/>Booleans</h1></div>
       <div className="mil-right"></div>
       {/* <div className='left'>

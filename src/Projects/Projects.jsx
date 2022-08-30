@@ -5,7 +5,10 @@ import affiniti from "../pictures/affiniti.png"
 const Projects = () => {
     return (
         <div className='projects-container'>
-            <h1 className='projects-title'>#Projects</h1>
+            <div className='projects-title'>
+            <h1>#Projects</h1>
+            </div>
+           
             <img className=' ' src={affiniti} alt="affinit" />
             <div className='project-card gap-4'>
                 

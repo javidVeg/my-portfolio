@@ -10,16 +10,20 @@
 
 .projects-container img {
     width: 80%;
+    border-radius: 8px;
 }
 
 .projects-title {
     display: flex;
     flex-direction: column;
-    color: white;
     font-family: 'Merriweather', serif;
     font-style: italic;
     font-size: 5vw;
     z-index: 20;
+    background: -webkit-linear-gradient(#eee, #8ed3ba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 .project-card {
@@ -35,13 +39,15 @@
     margin-bottom: 100px;
     margin-top: 20px;
     z-index: 10;
+    border-radius: 8px;
 }
 
 .project-card h1 {
-    width: 30%;
+    width: 50%;
 
 
 }
+
 
 .project-divider {
     border-top: 3px solid;

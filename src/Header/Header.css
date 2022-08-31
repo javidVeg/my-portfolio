@@ -9,6 +9,7 @@
   }
 
 
+
   .Navbar  #hidden {
     position: absolute;
     left: 0px;
@@ -38,4 +39,9 @@
     font-weight: 500;
     padding: 14px;
     
+    
+  }
+
+  .Navbar .links a:hover { 
+    color: #34D399;
   }

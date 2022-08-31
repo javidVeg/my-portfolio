@@ -18,6 +18,13 @@
     font-size: 5vw;
     z-index: 20;
 }
+.container-title h1 {
+   
+    background: -webkit-linear-gradient(#eee, #8ed3ba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
 .tech-card{
     width: 70%;
     min-height: 100%;

@@ -15,7 +15,7 @@ const Technologies = () => {
                 <div className='container-title'>
                     <h1>#Technologies</h1>
                 </div>
-            <div className="tech-card gap-10">
+            <div className="tech-card gap-10 shadow-lg shadow-black">
                 <img width={120} src={css} alt="css" />
                 <img width={120} src={html} alt="css" />
                 <img width={120} src={js} alt="css" />

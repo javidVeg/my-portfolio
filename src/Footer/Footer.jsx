@@ -74,45 +74,47 @@ const Footer = () => {
     return (
         <div className='footer'>
             <div className='footer-container'>
-                <motion.div
-                    ref={ref}
-                    animate={animation} className='grid-item-1 text-center mt-10 text-white items-center flex flex-col '>
-                    <div>
-                        <h1>Navigation</h1>
-                        <hr className='divider' />
-                    </div>
-                    <a href="#home">Home</a>
-                    <a href='#about'>About</a>
-                    <a href='#tech'>Technologies</a>
-                    <a href='#projects'>Projects</a>
-                    <a href='#contact'>Contact</a>
-                </motion.div>
-                <motion.div
-                    ref={ref}
-                    animate={animation2} className='grid-item-2 mt-10 flex flex-col items-center text-white'>
-                    <div className='flex flex-col items-center'>
-                        <h1>Find Me @</h1>
-                        <hr className='divider' />
-                    </div>
-                    <a href='https://www.linkedin.com/in/davidandrewmartinez/'><AiOutlineLinkedin size={35} color="#BFDBFE" className='icon mt-5' /></a>
-                    <a href='https://github.com/javidVeg'><FiGithub size={30} color="#DDD6FE" className='icon mt-5' /></a>
+                <div className='footer-top'>
+                    <motion.div
+                        ref={ref}
+                        animate={animation} className='nav-col text-center mt-10 text-white items-center flex flex-col '>
+                        <div>
+                            <h1>Navigation</h1>
+                            <hr className='divider' />
+                        </div>
+                        <a href="#home">Home</a>
+                        <a href='#about'>About</a>
+                        <a href='#tech'>Technologies</a>
+                        <a href='#projects'>Projects</a>
+                        <a href='#contact'>Contact</a>
+                    </motion.div>
+                    <motion.div
+                        ref={ref}
+                        animate={animation2} className='find-col mt-10 flex flex-col items-center text-white'>
+                        <div className='flex flex-col items-center'>
+                            <h1>Find Me @</h1>
+                            <hr className='divider' />
+                        </div>
+                        <a href='https://www.linkedin.com/in/davidandrewmartinez/'><AiOutlineLinkedin size={35} color="#BFDBFE" className='icon mt-5' /></a>
+                        <a href='https://github.com/javidVeg'><FiGithub size={30} color="#DDD6FE" className='icon mt-5' /></a>
 
-                </motion.div>
-                <motion.div
-                    ref={ref}
-                    animate={animation3} className='grid-item-3'>
-                    <img src={memoji} alt="alt-memoji" width="150vw" />
-                </motion.div>
-                <div className='foot-foot grid-item-4 text-white flex flex-row flex-wrap justify-center '>
-                    <div className='foot-left text-emerald-500'>
+                    </motion.div>
+                    <motion.div
+                        ref={ref}
+                        animate={animation3} className='memoji-col flex flex-col items-center'>
+                        <img className="memoji-real" src={memoji} alt="alt-memoji"/>
+                    </motion.div>
+                </div>
+                <div className='footer-bottom text-white flex flex-row flex-wrap self-center md:mt-20 '>
+                    <div className='foot-left text-emerald-500 mr-4 text-center'>
                         David Andrew Martinez &reg; {new Date().getFullYear()}
                     </div>
-                    <div className='foot-right text-center flex flex-row ' >
-                        Created using: 
+                    <div className='foot-right text-center flex flex-row mr-4 ' >
+                        Created using:
                     </div>
                     <div className='foot-right text-center flex flex-row gap-2 -ml-2 self-center'>
-                        <FaReact/><SiTailwindcss/><SiMaterialui/><SiFramer/>
-                        
+                        <FaReact /><SiTailwindcss /><SiMaterialui /><SiFramer />
+
                     </div>
                 </div>
             </div>

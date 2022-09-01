@@ -56,6 +56,15 @@
     color: grey;
 }
 
+.app-title{
+    font-size: x-large;
+    font-weight: 600;
+    
+}
+
+
+
+
 @media only screen and (max-width: 760px) {
     .project-card {
         flex-direction: column;
@@ -68,6 +77,14 @@
 
     .projects-title {
         font-size: 8vw;
+    }
+    .app-title{
+        text-align: center;
+        
+    }
+    .tech-text{
+        margin-top: 10px;
+    
     }
 
 

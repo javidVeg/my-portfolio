@@ -1,7 +1,11 @@
 import React from 'react';
 import memoji from '../pictures/david5.png'
 import { AiOutlineLinkedin } from "react-icons/ai"
+import { FaReact } from "react-icons/fa"
 import { FiGithub } from "react-icons/fi"
+import { SiFramer } from "react-icons/si"
+import { SiTailwindcss } from "react-icons/si"
+import { SiMaterialui } from "react-icons/si"
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./Footer.css";
@@ -90,8 +94,8 @@ const Footer = () => {
                         <h1>Find Me @</h1>
                         <hr className='divider' />
                     </div>
-                    <a href='https://www.linkedin.com/in/davidandrewmartinez/'><AiOutlineLinkedin size={35} color="#BFDBFE" className='mt-5' /></a>
-                    <a href='https://github.com/javidVeg'><FiGithub size={30} color="#DDD6FE" className='mt-5' /></a>
+                    <a href='https://www.linkedin.com/in/davidandrewmartinez/'><AiOutlineLinkedin size={35} color="#BFDBFE" className='icon mt-5' /></a>
+                    <a href='https://github.com/javidVeg'><FiGithub size={30} color="#DDD6FE" className='icon mt-5' /></a>
 
                 </motion.div>
                 <motion.div
@@ -99,12 +103,16 @@ const Footer = () => {
                     animate={animation3} className='grid-item-3'>
                     <img src={memoji} alt="alt-memoji" width="150vw" />
                 </motion.div>
-                <div className='grid-item-4 text-white flex flex-row flex-wrap justify-center '>
+                <div className='foot-foot grid-item-4 text-white flex flex-row flex-wrap justify-center '>
                     <div className='foot-left text-emerald-500'>
                         David Andrew Martinez &reg; {new Date().getFullYear()}
                     </div>
-                    <div className='foot-right text-center' >
-                        Not created on Wordpress because thats lame..
+                    <div className='foot-right text-center flex flex-row ' >
+                        Created using: 
+                    </div>
+                    <div className='foot-right text-center flex flex-row gap-2 -ml-2 self-center'>
+                        <FaReact/><SiTailwindcss/><SiMaterialui/><SiFramer/>
+                        
                     </div>
                 </div>
             </div>

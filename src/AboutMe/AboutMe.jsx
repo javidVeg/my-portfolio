@@ -20,7 +20,7 @@ const AboutMe = () => {
             });
         }
         if (!inView) {
-            animation.start({ x: -300 });
+            animation.start({ x: -200 });
         }
     };
 
@@ -38,7 +38,7 @@ const AboutMe = () => {
             });
         }
         if (!inView) {
-            animation2.start({ x: 300 });
+            animation2.start({ x: 200 });
         }
     };
 

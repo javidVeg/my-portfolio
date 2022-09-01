@@ -12,17 +12,38 @@ import './Technologies.css'
 const Technologies = () => {
     return (
         <div className='tech-container'>
-                <div className='container-title'>
-                    <h1>#Technologies</h1>
-                </div>
+            <div className='container-title'>
+                <h1>#Technologies</h1>
+            </div>
             <div className="tech-card gap-10 shadow-lg shadow-black">
-                <img width={120} src={css} alt="css" />
-                <img width={120} src={html} alt="css" />
-                <img width={120} src={js} alt="css" />
-                <img width={150} src={react} alt="css" />
-                <img width={150} src={mui} alt="css" />
-                <img width={150} src={tw} alt="css" />
-                <img width={120} src={node} alt="css" />
+                <div>
+                    <img width={150} src={react} alt="REACT" />
+                    <h1 className=' text-center text-slate-500 font-bold text-xl '>React</h1>
+                </div>
+                <div>
+                    <img width={120} src={js} alt="JS" />
+                    <h1 className=' text-center text-slate-500 font-bold text-xl mt-8'>Javascript</h1>
+                </div>
+                <div>
+                    <img width={120} src={css} alt="CSS" />
+                    <h1 className=' text-center text-slate-500 font-bold text-xl mt-8'>CSS</h1>
+                </div>
+                <div>
+                    <img width={120} src={html} alt="HTML" />
+                    <h1 className=' text-center text-slate-500 font-bold text-xl mt-8'>HTML</h1>
+                </div>
+                <div>
+                    <img width={150} src={mui} alt="MUI" />
+                    <h1 className=' text-center text-slate-500 font-bold text-xl'>Material UI</h1>
+                </div>
+                <div>
+                    <img width={150} src={tw} alt="TW" />
+                    <h1 className=' text-center text-slate-500 font-bold text-xl'>Tailwind</h1>
+                </div>
+                <div>
+                    <img width={120} src={node} alt="NODE" />
+                    <h1 className=' text-center text-slate-500 font-bold text-xl mt-8'>Node.js</h1>
+                </div>
             </div>
         </div>
     )

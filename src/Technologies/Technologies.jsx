@@ -6,6 +6,7 @@ import react from "../pictures/react1.png"
 import tw from "../pictures/tailwind.png"
 import mui from "../pictures/mui.png"
 import node from "../pictures/node.png"
+import gs from "../pictures/greensock.png"
 import './Technologies.css'
 
 
@@ -39,6 +40,10 @@ const Technologies = () => {
                 <div>
                     <img width={150} src={tw} alt="TW" />
                     <h1 className=' text-center text-slate-500 font-bold text-xl'>Tailwind</h1>
+                </div>
+                <div>
+                    <img width={135} src={gs} alt="gs" />
+                    <h1 className=' text-center text-slate-500 font-bold text-xl mt-5'>Greensock</h1>
                 </div>
                 <div>
                     <img width={120} src={node} alt="NODE" />

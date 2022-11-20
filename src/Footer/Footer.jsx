@@ -5,7 +5,6 @@ import { FaReact } from "react-icons/fa"
 import { FiGithub } from "react-icons/fi"
 import { SiFramer } from "react-icons/si"
 import { SiTailwindcss } from "react-icons/si"
-import { SiMaterialui } from "react-icons/si"
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./Footer.css";
@@ -113,7 +112,7 @@ const Footer = () => {
                         Created using:
                     </div>
                     <div className='foot-right text-center flex flex-row gap-2 -ml-2 self-center'>
-                        <FaReact /><SiTailwindcss /><SiMaterialui /><SiFramer />
+                        <FaReact /><SiTailwindcss /><SiFramer />
 
                     </div>
                 </div>

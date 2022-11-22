@@ -5,8 +5,8 @@ import Memoji from './Memoji/Memoji';
 import Projects from './Projects/Projects';
 import Footer from './Footer/Footer';
 import Technologies from './Technologies/Technologies';
-import MilPhotos from './MilPhotos/MilPhotos';
 import Header from './Header/Header';
+import Challanges from './Challanges/Challanges';
 
 function App() {
 
@@ -26,6 +26,9 @@ function App() {
       </div>
       <div id="projects">
         <Projects/>
+      </div>
+      <div id="challanges">
+        <Challanges/>
       </div>
       <div id="contact">
         <Footer />

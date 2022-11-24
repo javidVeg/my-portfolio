@@ -42,9 +42,9 @@ const Challanges = () => {
                         <div className="chall-wrapper">
                             <div className="tint">
                                 <div className='p-wrapper'>
-                                <p><FaHammer color='white' size={20}/><span> :</span>{name}</p>
-                                <p><MdDateRange color='white' size={20}/>{completedAt.substr(0, 10)}</p>
-                                <p><BiCodeAlt color='white' size={20}/>{completedLanguages[0]}</p>
+                                <p><FaHammer color='white' size={20}/>&nbsp;:&nbsp;{name}</p>
+                                <p><MdDateRange color='white' size={20}/>&nbsp;:&nbsp;{completedAt.substr(0, 10)}</p>
+                                <p><BiCodeAlt color='white' size={20}/>&nbsp;:&nbsp;{completedLanguages[0]}</p>
                                 </div>
                                
                             </div>

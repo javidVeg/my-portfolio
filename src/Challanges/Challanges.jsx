@@ -15,6 +15,30 @@ const Challanges = () => {
 
     const [challanges, setChallanges] = useState([])
     const [mapNum, setMapNum] = useState((4))
+    const [snippetData, setSnippetData] = useState([
+        {
+            "Image": snippet1,
+            "Title": "Ramp Application Question",
+            "Feat": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, dolorem?",
+            "Tech": "React, JS, CSS, HTML",
+            "Link": "https://codesandbox.io/s/gifted-boyd-11tusq?file=/src/App.js"
+        },
+        {
+            "Image": snippet1,
+            "Title": "Ramp Application Question",
+            "Feat": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, dolorem?",
+            "Tech": "React, JS, CSS, HTML",
+            "Link": "https://codesandbox.io/s/gifted-boyd-11tusq?file=/src/App.js"
+        },
+        {
+            "Image": snippet1,
+            "Title": "Ramp Application Question",
+            "Feat": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, dolorem?",
+            "Tech": "React, JS, CSS, HTML",
+            "Link": "https://codesandbox.io/s/gifted-boyd-11tusq?file=/src/App.js"
+        },
+        
+    ])
     const showMoreRef = useRef(null)
     const showLessRef = useRef(null)
 
@@ -77,23 +101,28 @@ const Challanges = () => {
             </button>
             <div className="code-snippets">
                 <h3 className="codewars-title text-emerald-500">Various Feature Snippets</h3>
-                <div className="snippet-wrapper ">
-                    <div className="code-snippet-container shadow-lg shadow-black">
-                        <div className="top">
-                            <img src={snippet1} alt="snippet-1" />
+                <div className="snippets-map">
+                    {snippetData.map(({ Title, Image, Feat, Tech, Link }) => (
+                        <div className="snippet-wrapper ">
+                            <div className="code-snippet-container shadow-lg shadow-black">
+                                <div className="top">
+                                    <img src={Image} alt="snippet-1" />
+                                </div>
+                                <div className="bottom">
+                                    <h2>{Title}</h2>
+                                    <p>Feature: {Feat}</p>
+                                    <p>Technologies: {Tech}</p>
+                                </div>
+                            </div>
+                            <a href={Link}>
+                                <div className="link">
+                                    <p className='link-p'>visit snippet</p>
+                                </div>
+                            </a>
                         </div>
-                        <div className="bottom">
-                            <h2>Ramp Application Question</h2>
-                            <p>Feature: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, dolorem?</p>
-                            <p>Technologies: React, JS, CSS, HTML</p>
-                            
-                        </div>
-                        
-                    </div>
-                    <div className="link">
-                        <p className='link-p'>visit snippet</p>
-                    </div>
+                    ))}
                 </div>
+
             </div>
         </div>
     )

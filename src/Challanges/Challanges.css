@@ -147,6 +147,7 @@
 }
 .snippet-wrapper:hover .code-snippet-container{
     opacity: 0.3;
+    cursor: default;
 }
 .snippet-wrapper:hover .link{
     opacity: 1;
@@ -190,14 +191,17 @@
 .bottom h2, p{
     color: black;
     /* text-align: center; */
+    font-family: 'PT Serif', serif;
 }
 .bottom h2{
     font-weight: 700;
     font-size: large;
+    
 }
 .bottom p:nth-child(3){
     color: rgb(69, 69, 69);
     font-size: smaller;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .link{
@@ -214,6 +218,15 @@
 .link-p{
     background: linear-gradient(45deg, rgb(76, 143, 97), rgb(0, 75, 156));
     color: white;
-    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: small;
     padding: 15px 30px;
+}
+.snippets-map{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }

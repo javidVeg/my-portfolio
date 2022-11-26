@@ -7,6 +7,7 @@
     justify-content: center;
     /* z-index: inherit; */
 }
+
 .challanges-title {
     display: flex;
     flex-direction: column;
@@ -19,15 +20,23 @@
     -webkit-text-fill-color: transparent;
 
 }
-.codewars-title{
+
+.codewars-title {
     text-align: center;
     padding: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     font-family: "Courier New", Courier, monospace;
 
 }
-.comp-container{
+
+.codewars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comp-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -35,20 +44,22 @@
     justify-content: center;
     align-content: center;
 }
-.chall-wrapper{
+
+.chall-wrapper {
     width: 250px;
     max-width: 300px;
-    min-height: 150px;
+    min-height: 100px;
     background: linear-gradient(90deg, rgb(141, 255, 177), rgb(3, 125, 255));
     margin: 1rem;
     border-radius: 10px;
     position: relative;
     color: white;
-   
- 
-    
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
+
 .chall-wrapper::before {
     position: absolute;
     content: '';
@@ -59,21 +70,74 @@
     background: rgb(0, 0, 0);
     opacity: .5;
     border-radius: 10px;
-    border: 5px solid rgba(255, 255, 255, 0.696) ;
-   
-    
-  
-  }
-.chall-wrapper p{
+    border: 5px solid rgba(255, 255, 255, 0.696);
+
+
+
+}
+
+.chall-wrapper p {
     position: relative;
     display: flex;
     flex-direction: row;
+
     color: white;
     font-weight: 400;
-    font-family: "Courier New", Courier, monospace;
-    
-    
+    font-family: 'Roboto Mono', monospace;
+    font-size: .8em;
 }
-.p-wrapper{
-    padding: 20px;
+
+.p-wrapper {
+    padding: 10px;
+}
+
+.icon {
+    min-width: 15px;
+}
+
+.show-more-button {
+    color: rgb(105, 105, 105);
+    width: 100px;
+}
+
+.show-more-button::before {
+    content: 'show more';
+
+}
+
+.show-more-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-less-button {
+    color: rgb(105, 105, 105);
+    display: none;
+    width: 100px;
+
+
+}
+
+.show-less-button::after {
+    content: 'show less';
+
+}
+
+.show-less-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.code-snippets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

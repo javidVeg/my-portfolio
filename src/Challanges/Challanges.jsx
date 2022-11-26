@@ -14,7 +14,7 @@ import { useRef } from 'react'
 const Challanges = () => {
 
     const [challanges, setChallanges] = useState([])
-    const [mapNum, setMapNum] = useState((3))
+    const [mapNum, setMapNum] = useState((4))
     const showMoreRef = useRef(null)
     const showLessRef = useRef(null)
 
@@ -38,7 +38,7 @@ const Challanges = () => {
         showLessRef.current.style.display = "block"
     }
     const showLess = () => {
-        setMapNum((3))
+        setMapNum((4))
         showMoreRef.current.style.display = "block"
         showLessRef.current.style.display = "none"
     }
@@ -55,7 +55,7 @@ const Challanges = () => {
             <div className="comp-container">
                 {challanges.slice(0, `${mapNum}`).map(({ id, name, completedAt, completedLanguages }) => (
                     <a href={`https://www.codewars.com/kata/${id}`} key={id}>
-                        <div className="chall-wrapper">
+                        <div className="chall-wrapper shadow-md shadow-black">
                             <div className="tint">
                                 <div className='p-wrapper'>
                                     <p><FaHammer color='white' size={15} className="icon" />&nbsp;:&nbsp;{name}</p>
@@ -77,12 +77,18 @@ const Challanges = () => {
             </button>
             <div className="code-snippets">
                 <h3 className="codewars-title text-emerald-500">Various Feature Snippets</h3>
-                <div className="snippet-wrapper">
-                    <div className="code-snippet-container">
+                <div className="snippet-wrapper ">
+                    <div className="code-snippet-container shadow-lg shadow-black">
                         <div className="top">
+                            <img src={snippet1} alt="snippet-1" />
                         </div>
-                        <div className="bottom"></div>
-                        {/* <img src={snippet1} alt="snippet-1" /> */}
+                        <div className="bottom">
+                            <h2>Ramp Application Question</h2>
+                            <p>Feature: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, dolorem?</p>
+                            <p>Technologies: React, JS, CSS, HTML</p>
+                            
+                        </div>
+                        
                     </div>
                     <div className="link">
                         <p className='link-p'>visit snippet</p>

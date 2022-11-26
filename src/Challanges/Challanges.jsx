@@ -6,6 +6,7 @@ import { MdDateRange } from "react-icons/md"
 import { BiCodeAlt } from "react-icons/bi"
 import { HiChevronDoubleDown } from "react-icons/hi"
 import { HiChevronDoubleUp } from "react-icons/hi"
+import snippet1 from "../pictures/snippet-1.png"
 
 import { useRef } from 'react'
 
@@ -61,7 +62,6 @@ const Challanges = () => {
                                     <p><MdDateRange color='white' size={20} className="icon" />&nbsp;:&nbsp;{completedAt.substr(0, 10)}</p>
                                     <p><BiCodeAlt color='white' size={20} className="icon" />&nbsp;:&nbsp;{completedLanguages[0]}</p>
                                 </div>
-
                             </div>
                         </div>
                     </a>
@@ -76,7 +76,18 @@ const Challanges = () => {
                 </div>
             </button>
             <div className="code-snippets">
-            <h3 className="codewars-title text-emerald-500">Various Feature Snippets</h3>
+                <h3 className="codewars-title text-emerald-500">Various Feature Snippets</h3>
+                <div className="snippet-wrapper">
+                    <div className="code-snippet-container">
+                        <div className="top">
+                        </div>
+                        <div className="bottom"></div>
+                        {/* <img src={snippet1} alt="snippet-1" /> */}
+                    </div>
+                    <div className="link">
+                        <p className='link-p'>visit snippet</p>
+                    </div>
+                </div>
             </div>
         </div>
     )

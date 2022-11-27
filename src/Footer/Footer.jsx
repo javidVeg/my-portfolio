@@ -73,7 +73,7 @@ const Footer = () => {
                         <a href='#about'>About</a>
                         <a href='#tech'>Technologies</a>
                         <a href='#projects'>Projects</a>
-                        <a href='#challanges'>Challanges</a>
+                        <a href='#challenges'>Challenges</a>
                         <a href='#contact'>Contact</a>
                     </div>
                     <div ref={findRef} className='find-col mt-10 flex flex-col items-center text-white'>

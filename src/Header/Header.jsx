@@ -20,8 +20,8 @@ const Header = () => {
                 <a onClick={() => setOpen(!isOpen)} href="#projects">
                     Projects
                 </a>
-                <a onClick={() => setOpen(!isOpen)} href="#challanges">
-                    Challanges
+                <a onClick={() => setOpen(!isOpen)} href="#challenges">
+                    Challenges
                 </a>
                 <a onClick={() => setOpen(!isOpen)} href="#contact">
                     Contact

@@ -63,8 +63,8 @@ const Projects = () => {
                 <h1 className='app-title'>Hello, Apple<hr className='project-divider' /></h1>
                 <h1 >
                     This is a web based application that I created as part of my devCodeCamp bootcamp capstone project. This Application is a robust
-                    platform where users can register, create post about Apple product leaks and news with full CRUD capabilities, like post and even have a comment like
-                    dialogue with other users within the posting. This application also uses the News API to show relevent articels based on what the posting is about.
+                    platform where users can register, create a post about Apple product leaks and news with full CRUD capabilities, like a post and even have a comment-like
+                    dialogue with other users within the posting. This application also uses the News API to show relevant articles based on what the posting is about.
 
                 </h1>
                 <div>
@@ -72,7 +72,7 @@ const Projects = () => {
                         Technologies
                     </h1>
                     <hr className='project-divider' />
-                    <p>-React.js<br />-Matrial UI<br />-Redux<br />-Node.js<br />-Express.js<br />-MongoDB<br />-JWT</p>
+                    <p>-React.js<br />-Material UI<br />-Redux<br />-Node.js<br />-Express.js<br />-MongoDB<br />-JWT</p>
                 </div>
 
 

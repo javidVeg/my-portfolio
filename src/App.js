@@ -6,7 +6,7 @@ import Projects from './Projects/Projects';
 import Footer from './Footer/Footer';
 import Technologies from './Technologies/Technologies';
 import Header from './Header/Header';
-import Challanges from './Challanges/Challanges';
+import Challenges from './Challenges/Challenges';
 
 function App() {
 
@@ -27,8 +27,8 @@ function App() {
       <div id="projects">
         <Projects/>
       </div>
-      <div id="challanges">
-        <Challanges/>
+      <div id="challenges">
+        <Challenges/>
       </div>
       <div id="contact">
         <Footer />

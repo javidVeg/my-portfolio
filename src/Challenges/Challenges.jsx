@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import "./Challanges.css"
+import "./Challenges.css"
 import Axios from "axios"
 import { FaHammer } from "react-icons/fa"
 import { MdDateRange } from "react-icons/md"
@@ -11,9 +11,9 @@ import snippet1 from "../pictures/snippet-1.png"
 import { useRef } from 'react'
 
 
-const Challanges = () => {
+const Challenges = () => {
 
-    const [challanges, setChallanges] = useState([])
+    const [Challenges, setChallenges] = useState([])
     const [mapNum, setMapNum] = useState((4))
     const [snippetData, setSnippetData] = useState([
         {
@@ -32,14 +32,14 @@ const Challanges = () => {
 
             Axios.get("https://www.codewars.com/api/v1/users/javidVeg/code-challenges/completed?page=0")
                 .then(response => {
-                    setChallanges(response.data.data)
+                    setChallenges(response.data.data)
                 })
                 .catch(err => console.error(err.message));
         };
         challange();
     }, [])
 
-    console.log(challanges)
+    console.log(Challenges)
 
     const showMore = () => {
         setMapNum((1000))
@@ -53,16 +53,16 @@ const Challanges = () => {
     }
 
     return (
-        <div className="challanges-container">
-            <div className="challanges-title">
-                <h1 className=''>#Challanges</h1>
+        <div className="challenges-container">
+            <div className="challenges-title">
+                <h1 className=''>#Challenges</h1>
             </div>
             <div className="codewars">
-                <h3 className="codewars-title text-emerald-500">Completed Codewars Challanges</h3>
+                <h3 className="codewars-title text-emerald-500">Completed Codewars Challenges</h3>
                 <a href="https://www.codewars.com/users/javidVeg"><img src="https://www.codewars.com/users/javidVeg/badges/large"></img></a>
             </div>
             <div className="comp-container">
-                {challanges.slice(0, `${mapNum}`).map(({ id, name, completedAt, completedLanguages }) => (
+                {Challenges.slice(0, `${mapNum}`).map(({ id, name, completedAt, completedLanguages }) => (
                     <a href={`https://www.codewars.com/kata/${id}`} key={id}>
                         <div className="chall-wrapper shadow-md shadow-black">
                             <div className="tint">
@@ -113,4 +113,4 @@ const Challanges = () => {
     )
 }
 
-export default Challanges
+export default Challenges

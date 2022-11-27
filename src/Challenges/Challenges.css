@@ -1,4 +1,4 @@
-.challanges-container {
+.challenges-container {
     width: 100%;
     margin: 50px auto;
     display: flex;
@@ -8,7 +8,7 @@
     /* z-index: inherit; */
 }
 
-.challanges-title {
+.challenges-title {
     display: flex;
     flex-direction: column;
     font-family: 'Merriweather', serif;

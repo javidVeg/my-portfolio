@@ -28,7 +28,7 @@ const AboutMe = () => {
                 toggleActions: "play"
             },
             duration: 2.5,
-            x: -800,
+            x: -1000,
             ease: "elastic.out(1, 0.75)",
             delay: .5,
             onComplete: (() => {

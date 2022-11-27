@@ -42,7 +42,7 @@ const Memoji = () => {
                         <a href="mailto: javidx24@icloud.com"><BsMailbox2 size={25} /></a>
                     </div>
                     <div >
-                        <a href='https://drive.google.com/file/d/1TUVVKOoKSYCwlU5GTPKCu0uB8Ywui_Xw/view?usp=sharing'><RiFilePaper2Fill className='mx-5' size={25} /></a>
+                        <a href='https://drive.google.com/file/d/1gLiliO0SvzFNTdhXtfRZJofRz7YeFVYS/view?usp=sharing'><RiFilePaper2Fill className='mx-5' size={25} /></a>
                     </div>
                 </div>
 

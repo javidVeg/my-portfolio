@@ -19,7 +19,7 @@ const Challenges = () => {
         {
             "Image": snippet1,
             "Title": "Ramp Application Question",
-            "Feat": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, dolorem?",
+            "Feat": "Create a component that displays different features based on the states value",
             "Tech": "React, JS, CSS, HTML",
             "Link": "https://codesandbox.io/s/gifted-boyd-11tusq?file=/src/App.js"
         }   

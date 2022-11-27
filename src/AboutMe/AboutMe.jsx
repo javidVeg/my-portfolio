@@ -9,50 +9,20 @@ const AboutMe = () => {
 
     const imgRef = useRef(null)
     const textRef = useRef(null)
-    // const { ref, inView } = useInView();
-    // const animation = useAnimation();
-    // const animation2 = useAnimation();
-
-    // const reviewAnimation = () => {
-    //     if (inView) {
-    //         animation.start({
-    //             x: 0,
-    //             transition: {
-    //                 type: "spring",
-    //                 duration: 1,
-    //                 bounce: 0.3,
-    //             },
-    //         });
-    //     }
-    //     if (!inView) {
-    //         animation.start({ x: -200 });
-    //     }
-    // };
-
-    // reviewAnimation();
-
-    // const reviewAnimation2 = () => {
-    //     if (inView) {
-    //         animation2.start({
-    //             x: 0,
-    //             transition: {
-    //                 type: "spring",
-    //                 duration: 1,
-    //                 bounce: 0.3,
-    //             },
-    //         });
-    //     }
-    //     if (!inView) {
-    //         animation2.start({ x: 200 });
-    //     }
-    // };
-
-    // reviewAnimation2();
+    
+    const refresh = () => {
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+            console.log("refresh")
+        }, 3000)
+    
+    }
+ 
     useEffect(() => {
         gsap.from(textRef.current, {
             scrollTrigger: {
                 id: "text",
-                markers: true,
+                markers: false,
                 trigger: imgRef.current,
                 start: "center-=150 center",
                 toggleActions: "play"
@@ -60,8 +30,12 @@ const AboutMe = () => {
             duration: 2.5,
             x: -800,
             ease: "elastic.out(1, 0.75)",
-            delay: .5
+            delay: .5,
+            onComplete: (() => {
+                refresh();
+            })
         })
+        // .then(refresh())
     }, [])
     
     useEffect(() => {

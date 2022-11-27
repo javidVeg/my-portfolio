@@ -22,22 +22,7 @@ const Challanges = () => {
             "Feat": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, dolorem?",
             "Tech": "React, JS, CSS, HTML",
             "Link": "https://codesandbox.io/s/gifted-boyd-11tusq?file=/src/App.js"
-        },
-        {
-            "Image": snippet1,
-            "Title": "Ramp Application Question",
-            "Feat": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, dolorem?",
-            "Tech": "React, JS, CSS, HTML",
-            "Link": "https://codesandbox.io/s/gifted-boyd-11tusq?file=/src/App.js"
-        },
-        {
-            "Image": snippet1,
-            "Title": "Ramp Application Question",
-            "Feat": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, dolorem?",
-            "Tech": "React, JS, CSS, HTML",
-            "Link": "https://codesandbox.io/s/gifted-boyd-11tusq?file=/src/App.js"
-        },
-        
+        }   
     ])
     const showMoreRef = useRef(null)
     const showLessRef = useRef(null)

@@ -21,7 +21,10 @@ const AboutMe = () => {
    
  
     useEffect(() => {
-        gsap.from(textRef.current, {
+        refresh();
+
+        setTimeout(() => {
+         gsap.from(textRef.current, {
             scrollTrigger: {
                 id: "text",
                 markers: false,
@@ -36,8 +39,10 @@ const AboutMe = () => {
             // onComplete: (() => {
             //     refresh();
             // })
-        })
-        refresh();
+        })   
+        },600)
+        
+        
     }, [])
     
     useEffect(() => {

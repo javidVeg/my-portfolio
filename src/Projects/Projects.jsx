@@ -1,8 +1,6 @@
 import React from 'react'
 import "./Projects.css"
-import affiniti from "../pictures/affiniti.png"
-import hello from "../pictures/hello-apple.jpg"
-import AVO from "../pictures/allvets.png"
+
 
 const Projects = () => {
     return (
@@ -11,7 +9,7 @@ const Projects = () => {
                 <h1 className=''>#Projects</h1>
             </div>
            {/*------------- THIS IS AVO SECTION ---------------*/}
-            <img className='shadow-lg shadow-black' src={AVO} alt="all-veterans-outside" />
+            <img className='shadow-lg shadow-black' src={"https://res.cloudinary.com/davidveg/image/upload/v1669666945/allvets.ef2c8f35430dc84d9199_hr5uwu.png"} alt="all-veterans-outside-hero-example" />
             <div className='project-card gap-4 shadow-lg shadow-black'>
                 <h1 className='app-title'>All Veterans Outside<hr className='project-divider' /></h1>
 
@@ -35,7 +33,7 @@ const Projects = () => {
                 </div>
             </div>
             {/* ------------THIS IS AFFINITIS SECTION--------------- */}
-            <img className='shadow-lg shadow-black' src={affiniti} alt="affinit" />
+            <img className='shadow-lg shadow-black' src={"https://res.cloudinary.com/davidveg/image/upload/v1669667053/affiniti.68b8735d837712f0b0f9_hlr3ub.png"} alt="affinit-hero-example" />
             <div className='project-card gap-4 shadow-lg shadow-black'>
                 <h1 className='app-title'>Affinitihair.com<hr className='project-divider' /></h1>
 
@@ -58,7 +56,7 @@ const Projects = () => {
                 </div>
             </div>
             {/* ------------THIS IS Hello, Apples SECTION--------------- */}
-            <img className='shadow-lg shadow-black' src={hello} alt="hello apple" />
+            <img className='shadow-lg shadow-black' src={"https://res.cloudinary.com/davidveg/image/upload/v1669666984/hello-apple.d22192676e7c2baf9b0b_ycpnuq.png"} alt="hello apple" />
             <div className='project-card gap-1 shadow-lg shadow-black'>
                 <h1 className='app-title'>Hello, Apple<hr className='project-divider' /></h1>
                 <h1 >

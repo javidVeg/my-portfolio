@@ -6,18 +6,18 @@ import { MdDateRange } from "react-icons/md"
 import { BiCodeAlt } from "react-icons/bi"
 import { HiChevronDoubleDown } from "react-icons/hi"
 import { HiChevronDoubleUp } from "react-icons/hi"
-import snippet1 from "../pictures/snippet-1.png"
+
 
 import { useRef } from 'react'
 
 
 const Challenges = () => {
 
-    const [Challenges, setChallenges] = useState([])
+    const [challenges, setChallenges] = useState([])
     const [mapNum, setMapNum] = useState((4))
     const [snippetData, setSnippetData] = useState([
         {
-            "Image": snippet1,
+            "Image": "https://res.cloudinary.com/davidveg/image/upload/v1669667048/snippet-1.04a92c619d9b017e7f1e_levoef.png",
             "Title": "Ramp Application Question",
             "Feat": "Create a component that displays different features based on the states value",
             "Tech": "React, JS, CSS, HTML",
@@ -39,7 +39,7 @@ const Challenges = () => {
         challange();
     }, [])
 
-    console.log(Challenges)
+    console.log(challenges)
 
     const showMore = () => {
         setMapNum((1000))
@@ -62,12 +62,12 @@ const Challenges = () => {
                 <a href="https://www.codewars.com/users/javidVeg"><img src="https://www.codewars.com/users/javidVeg/badges/large"></img></a>
             </div>
             <div className="comp-container">
-                {Challenges.slice(0, `${mapNum}`).map(({ id, name, completedAt, completedLanguages }) => (
-                    <a href={`https://www.codewars.com/kata/${id}`} key={id}>
-                        <div className="chall-wrapper shadow-md shadow-black">
+                {challenges.slice(0, `${mapNum}`).map(({ id, name, completedAt, completedLanguages }) => (
+                    <a href={`https://www.codewars.com/kata/${id}`} >
+                        <div className="chall-wrapper shadow-md shadow-black" >
                             <div className="tint">
-                                <div className='p-wrapper'>
-                                    <p><FaHammer color='white' size={15} className="icon" />&nbsp;:&nbsp;{name}</p>
+                                <div className='p-wrapper'  key={id}>
+                                    <p ><FaHammer color='white' size={15} className="icon" />&nbsp;:&nbsp;{name}</p>
                                     <p><MdDateRange color='white' size={20} className="icon" />&nbsp;:&nbsp;{completedAt.substr(0, 10)}</p>
                                     <p><BiCodeAlt color='white' size={20} className="icon" />&nbsp;:&nbsp;{completedLanguages[0]}</p>
                                 </div>

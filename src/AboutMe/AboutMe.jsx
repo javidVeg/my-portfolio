@@ -14,47 +14,49 @@ const AboutMe = () => {
         setTimeout(() => {
             ScrollTrigger.refresh();
             console.log("refresh")
-        }, 1000)
+        }, 500)
     
     }
-    // refresh()
+   
+   
  
     useEffect(() => {
         gsap.from(textRef.current, {
             scrollTrigger: {
                 id: "text",
-                markers: true,
+                markers: false,
                 trigger: imgRef.current,
-                start: "top+=50 center",
+                start: "top+=25 center",
                 toggleActions: "play"
             },
             duration: 2.5,
             x: -1000,
             ease: "elastic.out(1, 0.75)",
-            delay: .5,
-            onComplete: (() => {
-                refresh();
-            })
+            // delay: .5,
+            // onComplete: (() => {
+            //     refresh();
+            // })
         })
-        // .then(refresh())
+        refresh();
     }, [])
     
     useEffect(() => {
         gsap.from(imgRef.current, {
             scrollTrigger: {
                 id: "img",
-                markers: true,
+                markers: false,
                 trigger: imgRef.current,
-                start: "top+=50 center",
+                start: "top+=25 center",
                 toggleActions: "play"
             },
             duration: 2.5,
             x: 800,
             ease: "elastic.out(1, 0.75)",
-            delay: .5
+            // delay: .5
             
         })
     }, [])
+
 
 
     return (

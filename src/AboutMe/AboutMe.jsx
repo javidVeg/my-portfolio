@@ -9,57 +9,95 @@ const AboutMe = () => {
 
     const imgRef = useRef(null)
     const textRef = useRef(null)
-    
+
     const refresh = () => {
         setTimeout(() => {
             ScrollTrigger.refresh();
             console.log("refresh")
         }, 500)
-    
+
     }
-   
-   
- 
+
+
+
     useEffect(() => {
+
+        const mm = gsap.matchMedia();
+
+        mm.add({
+            isMobile: "(max-width: 445px)",
+            isDesktop: "(min-width: 446px)",
+        }, (context) => {
+            console.log(context.conditions)
+
+        })
+
+        mm.add("(max-width: 445px)", () => {
+
+            gsap.from(textRef.current, {
+                scrollTrigger: {
+                    id: "text2",
+                    markers: false,
+                    trigger: imgRef.current,
+                    start: "top+=90 center",
+                    toggleActions: "play"
+                },
+                duration: 2.5,
+                x: -1000,
+                ease: "elastic.out(1, 0.75)",
+
+            })
+            gsap.from(imgRef.current, {
+                scrollTrigger: {
+                    id: "img2",
+                    markers: false,
+                    trigger: imgRef.current,
+                    start: "top+=90 center",
+                    toggleActions: "play"
+                },
+                duration: 2.5,
+                x: 800,
+                ease: "elastic.out(1, 0.75)",
+
+            })
+
+        })
+        mm.add("(min-width: 446px)", () => {
+            gsap.from(textRef.current, {
+                scrollTrigger: {
+                    id: "text",
+                    markers: false,
+                    trigger: imgRef.current,
+                    start: "top+=25 center",
+                    toggleActions: "play"
+                },
+                duration: 2.5,
+                x: -1000,
+                ease: "elastic.out(1, 0.75)",
+
+            })
+            gsap.from(imgRef.current, {
+                scrollTrigger: {
+                    id: "img",
+                    markers: false,
+                    trigger: imgRef.current,
+                    start: "top+=25 center",
+                    toggleActions: "play"
+                },
+                duration: 2.5,
+                x: 800,
+                ease: "elastic.out(1, 0.75)",
+
+            })
+        })
+
         refresh();
 
-        setTimeout(() => {
-         gsap.from(textRef.current, {
-            scrollTrigger: {
-                id: "text",
-                markers: false,
-                trigger: imgRef.current,
-                start: "top+=25 center",
-                toggleActions: "play"
-            },
-            duration: 2.5,
-            x: -1000,
-            ease: "elastic.out(1, 0.75)",
-            // delay: .5,
-            // onComplete: (() => {
-            //     refresh();
-            // })
-        })   
-        },600)
-        
-        
+
     }, [])
-    
+
     useEffect(() => {
-        gsap.from(imgRef.current, {
-            scrollTrigger: {
-                id: "img",
-                markers: false,
-                trigger: imgRef.current,
-                start: "top+=25 center",
-                toggleActions: "play"
-            },
-            duration: 2.5,
-            x: 800,
-            ease: "elastic.out(1, 0.75)",
-            // delay: .5
-            
-        })
+
     }, [])
 
 

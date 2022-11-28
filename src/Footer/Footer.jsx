@@ -24,9 +24,9 @@ const Footer = () => {
                 toggleActions: "play"
             },
             duration: 2.5,
-            x: -400,
+            x: -800,
             ease: "elastic.out(1, 0.75)",
-            delay: .5
+            
         })
     }, [])
     useEffect(() => {
@@ -38,9 +38,9 @@ const Footer = () => {
                 toggleActions: "play"
             },
             duration: 2.5,
-            y: 400,
+            y: 800,
             ease: "elastic.out(1, 0.75)",
-            delay: .5
+            
         })
     }, [])
     useEffect(() => {
@@ -52,9 +52,9 @@ const Footer = () => {
                 toggleActions: "play"
             },
             duration: 2.5,
-            x: 400,
+            x: 800,
             ease: "elastic.out(1, 0.75)",
-            delay: .5
+            
         })
     }, [])
 

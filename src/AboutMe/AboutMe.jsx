@@ -14,17 +14,18 @@ const AboutMe = () => {
         setTimeout(() => {
             ScrollTrigger.refresh();
             console.log("refresh")
-        }, 3000)
+        }, 1000)
     
     }
+    // refresh()
  
     useEffect(() => {
         gsap.from(textRef.current, {
             scrollTrigger: {
                 id: "text",
-                markers: false,
+                markers: true,
                 trigger: imgRef.current,
-                start: "center-=150 center",
+                start: "top+=50 center",
                 toggleActions: "play"
             },
             duration: 2.5,
@@ -42,9 +43,9 @@ const AboutMe = () => {
         gsap.from(imgRef.current, {
             scrollTrigger: {
                 id: "img",
-                markers: false,
+                markers: true,
                 trigger: imgRef.current,
-                start: "center-=150 center",
+                start: "top+=50 center",
                 toggleActions: "play"
             },
             duration: 2.5,

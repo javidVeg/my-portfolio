@@ -15,10 +15,13 @@ function App() {
   useEffect(() => {
     window.onmousemove = event => {
       const { pageX, pageY } = event;
-      ghostRef.current.style.left = `${pageX}px`
-      ghostRef.current.style.top = `${pageY}px`
-      console.log("x1:" + pageX, "y1:" + pageY);
+      ghostRef.current.animate({
+        left: `${pageX}px`,
+        top: `${pageY}px`
+      },{ duration: 5000, fill: 'forwards' })
     }
+      
+    
   }, [ghostRef])
 
 
@@ -27,12 +30,14 @@ function App() {
 
 
   return (
+    
     <div className='main'>
-      <div ref={ghostRef} id="ghost" className='ghost'></div>
+      <div id="ghost-blur" ></div>
+      <div ref={ghostRef} id="ghost"></div>
       <div id="home">
         <Header />
       </div>
-      <div className='-mt-24'>
+      <div className='relative z-10 -mt-24'>
         <Memoji />
       </div>
       <div id="about" className='flex items-center justify-center mt-10'>
@@ -41,16 +46,17 @@ function App() {
       <div id="tech">
         <Technologies />
       </div>
-      <div id="projects">
+      <div id="projects" className='relative z-10'>
         <Projects />
       </div>
-      <div id="challenges">
+      <div id="challenges" className='relative z-10'>
         <Challenges />
       </div>
-      <div id="contact">
+      <div id="contact" className='relative z-10'>
         <Footer />
       </div>
     </div>
+  
   );
 }
 

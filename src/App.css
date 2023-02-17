@@ -5,13 +5,43 @@
   padding: 0;
   background-color: #262626;
   overflow-y: auto;
+
 }
 
-.ghost{
+#ghost{
   background-color: white;
   height: 500px;
   width: 500px;
   aspect-ratio: 1;
   position: absolute;
- 
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient( to left, red, blue);
+  animation: ghost-rotate 20s linear infinite;
+  filter: blur(200px);
+}
+
+#ghost-blur{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  filter: blur(200px);
+}
+
+@keyframes ghost-rotate {
+  from{
+    rotate: 0deg;
+  } 
+
+  50%{
+    scale: 1 1.5;
+  }
+
+  to{
+    rotate: 360deg;
+  }
 }

@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Observer from 'gsap/Observer';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AboutMe from './AboutMe/AboutMe';
 import './App.css';
 import Memoji from './Memoji/Memoji';
@@ -12,6 +14,9 @@ import Challenges from './Challenges/Challenges';
 function App() {
 
   const ghostRef = useRef(null)
+  const [mouseX, setMouseX] = useState(null)
+  const [mouseY, setMouseY] = useState(null)
+  const [scrollY, setScrollY] = useState(mouseY + 0)
 
 
 
@@ -20,6 +25,7 @@ function App() {
   //   const { clientX , clientY } = event;
   //   ghostRef.current.style.left = `${clientX}px`
   //   ghostRef.current.style.top = `${clientY}px`
+  //   console.log("x1:" + clientX, "y1:" + clientY);
   // } 
 
 
@@ -28,16 +34,56 @@ function App() {
   //  console.log(clientX)
   // } 
 
-  Observer.create({
-    target: window,         
-    type: "wheel,touch,scroll,pointer",    
-    // onChange: (self) => console.log(self.deltaX, self.deltaY),
-    onMove: (self) => {
-      console.log("x:" + self.deltaX, "y:" + self.deltaY);
-      ghostRef.current.style.left = `${self.clientX}px`;
-      ghostRef.current.style.top = `${self.clientY}px`;
-    }
-  });
+
+  useEffect(() => {
+    const ghost = ghostRef.current;
+  
+    gsap.set(ghost, { xPercent: -50, yPercent: -50 });
+  
+    ghost.addEventListener("mousemove", (event) => {
+      gsap.to(ghost, { duration: 0.5, x: event.clientX, y: event.clientY });
+    });
+  
+    ScrollTrigger.create({
+      trigger: ghostRef,
+      start: "top top",
+      end: "bottom bottom",
+      scrub: true,
+      onUpdate: (self) => {
+        const scroll = self.direction === 1 ? self.progress : 1 - self.progress;
+        gsap.set(ghost, { scroll });
+      }
+    });
+  
+  }, [ghostRef]);
+
+  // useEffect(() =>{
+  //   Observer.create({
+  //     target: window,         
+  //     type: "wheel,touch,scroll,pointer",    
+      
+  //     onMove: (move) => {
+  //       setMouseX(move.x);
+  //       setMouseY(move.y);
+        
+  //     },
+     
+
+  //     onWheel: (move) => {
+  //       setScrollY(move.deltaY)
+  //       // console.log(move.deltaY);
+  //     }
+  //   });
+
+  //   ghostRef.current.style.left = `${mouseX}px`;
+  //   ghostRef.current.style.top = `${mouseY}px`;
+    
+  //   console.log("X:" + mouseX, "Y:" + mouseY)
+
+  // }, [mouseX,mouseY, scrollY])
+
+
+
 
   
 

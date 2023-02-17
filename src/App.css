@@ -18,19 +18,20 @@
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  border-radius: 50%;
-  background: linear-gradient( to left, red, blue);
-  animation: ghost-rotate 20s linear infinite;
-  filter: blur(200px);
+  border-radius: 50% 30% 30% 50%;
+  background: linear-gradient( to left, rgb(129, 3, 255), rgb(244, 68, 115));
+  animation: ghost-rotate 20s ease-in-out infinite;
+  filter: blur(100px);
+  opacity: .5;
+ 
 }
 
-#ghost-blur{
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 2;
-  filter: blur(200px);
+@media only screen and (max-width: 760px) {
+  #ghost{
+    display: none;
+  }
 }
+
 
 @keyframes ghost-rotate {
   from{
@@ -38,7 +39,7 @@
   } 
 
   50%{
-    scale: 1 1.5;
+    scale: 1 1.2;
   }
 
   to{

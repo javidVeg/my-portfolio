@@ -55,7 +55,7 @@ const Challenges = () => {
     return (
         <div className="challenges-container">
             <div className="challenges-title">
-                <h1 className=''>#Challenges</h1>
+                <h1 className=''>#Extras</h1>
             </div>
             <div className="codewars">
                 <h3 className="codewars-title text-emerald-500">Completed Codewars Challenges</h3>

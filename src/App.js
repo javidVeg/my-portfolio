@@ -11,6 +11,7 @@ import Challenges from './Challenges/Challenges';
 function App() {
 
   const ghostRef = useRef(null)
+  const ghostRef2 = useRef(null)
 
   useEffect(() => {
     window.onmousemove = event => {
@@ -20,8 +21,7 @@ function App() {
         top: `${pageY}px`
       },{ duration: 5000, fill: 'forwards' })
     }
-      
-    
+  
   }, [ghostRef])
 
 
@@ -32,8 +32,8 @@ function App() {
   return (
     
     <div className='main'>
-      <div id="ghost-blur" ></div>
-      <div ref={ghostRef} id="ghost"></div>
+     
+   
       <div id="home">
         <Header />
       </div>
@@ -55,6 +55,7 @@ function App() {
       <div id="contact" className='relative z-10'>
         <Footer />
       </div>
+      <div ref={ghostRef} id="ghost"></div>
     </div>
   
   );

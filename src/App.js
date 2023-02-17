@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import Observer from 'gsap/Observer';
 import AboutMe from './AboutMe/AboutMe';
 import './App.css';
 import Memoji from './Memoji/Memoji';
@@ -10,8 +11,42 @@ import Challenges from './Challenges/Challenges';
 
 function App() {
 
+  const ghostRef = useRef(null)
+
+
+
+
+  // window.onmousemove = event => {
+  //   const { clientX , clientY } = event;
+  //   ghostRef.current.style.left = `${clientX}px`
+  //   ghostRef.current.style.top = `${clientY}px`
+  // } 
+
+
+  // window.onscroll = event => {
+  //   const { clientX , clientY } = event;
+  //  console.log(clientX)
+  // } 
+
+  Observer.create({
+    target: window,         
+    type: "wheel,touch,scroll,pointer",    
+    // onChange: (self) => console.log(self.deltaX, self.deltaY),
+    onMove: (self) => {
+      console.log("x:" + self.deltaX, "y:" + self.deltaY);
+      ghostRef.current.style.left = `${self.clientX}px`;
+      ghostRef.current.style.top = `${self.clientY}px`;
+    }
+  });
+
+  
+
+  
+
+
   return (
     <div className='main'>
+      <div ref={ghostRef} className='ghost'></div>
       <div id="home">
         <Header/>
       </div>

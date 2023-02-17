@@ -23,15 +23,7 @@ const AboutMe = () => {
     useEffect(() => {
 
         const mm = gsap.matchMedia();
-
-        mm.add({
-            isMobile: "(max-width: 445px)",
-            isDesktop: "(min-width: 446px)",
-        }, (context) => {
-            console.log(context.conditions)
-
-        })
-
+        
         mm.add("(max-width: 445px)", () => {
 
             gsap.from(textRef.current, {

@@ -9,25 +9,20 @@ import { RiFilePaper2Fill } from "react-icons/ri"
 const Memoji = () => {
 
     const nameRef = useRef();
-    const alphabet = "ABCDEFGHIJKLMONPQRSTUVWXYZ"
+    const alphabet = "ABCDEFGHIJKLSTUVWXYZabcdefghijklmnopqrstuvw"
 
 
     useEffect(() => {
-
-        nameRef.current.onmouseover = () => {
             let runTime = 0
             let interval = null
-
-            // clearInterval(interval)
+            clearInterval(interval)
             interval = setInterval(() => {
                 nameRef.current.innerText = nameRef.current.innerText.split("")
                     .map((letter, index) => {
                         if (index < runTime) {
-                            console.log(index, runTime)
                             return nameRef.current.dataset.value[index];
                         }
-                        console.log("go")
-                        return alphabet[Math.floor(Math.random() * 26)];
+                        return alphabet[Math.floor(Math.random() * 43)];
                     }).join("");
 
                 if (runTime >= nameRef.current.dataset.value.length) {
@@ -35,11 +30,7 @@ const Memoji = () => {
                 };
 
                 runTime += 1 / 3;
-            }, 30);
-
-        }
-        console.log(nameRef)
-
+            }, 50);
     }, [nameRef])
 
     return (

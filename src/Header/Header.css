@@ -1,47 +1,49 @@
 .Navbar {
-    width: 50px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
-    overflow: hidden;
-    
-  }
+  width: 50px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  overflow: hidden;
+
+}
 
 
 
-  .Navbar  #hidden {
-    position: absolute;
-    left: 0px;
-    top: 80px;
-    height: auto;
-    width: 200px;
-    margin-left: 30px;
-    background-color: rgb(24 24 27);
-    opacity: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 8px;
-    z-index: 50;
-    
-  }
+#hidden {
+display: none;
+
+}
+
+.links {
+
+  position: absolute;
+  left: 0px;
+  top: 80px;
+  height: auto;
+  width: 200px;
+  margin-left: 30px;
+  background-color: rgb(24 24 27);
+  opacity: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  z-index: 50;
 
 
-  .Navbar .links {
-    display: none;
-  }
+}
 
-  .Navbar .links a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 14px;
-    
-    
-  }
+.Navbar .links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 14px;
 
-  .Navbar .links a:hover { 
-    color: #34D399;
-  }
+
+}
+
+.Navbar .links a:hover {
+  color: #34D399;
+}

@@ -19,21 +19,14 @@ function App() {
       ghostRef.current.animate({
         left: `${pageX}px`,
         top: `${pageY}px`
-      },{ duration: 5000, fill: 'forwards' })
+      }, { duration: 5000, fill: 'forwards' })
     }
-  
+
   }, [ghostRef])
 
 
-
-
-
-
   return (
-    
     <div className='main'>
-     
-   
       <div id="home">
         <Header />
       </div>
@@ -57,7 +50,7 @@ function App() {
       </div>
       <div ref={ghostRef} id="ghost"></div>
     </div>
-  
+
   );
 }
 

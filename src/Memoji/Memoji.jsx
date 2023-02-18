@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import image1 from "../pictures/david1.png"
 import './Memoji.css';
 import { BsLinkedin } from "react-icons/bs"
@@ -8,6 +8,39 @@ import { RiFilePaper2Fill } from "react-icons/ri"
 
 const Memoji = () => {
 
+    const nameRef = useRef();
+    const alphabet = "ABCDEFGHIJKLMONPQRSTUVWXYZ"
+
+
+    useEffect(() => {
+
+        nameRef.current.onmouseover = () => {
+            let runTime = 0
+            let interval = null
+
+            // clearInterval(interval)
+            interval = setInterval(() => {
+                nameRef.current.innerText = nameRef.current.innerText.split("")
+                    .map((letter, index) => {
+                        if (index < runTime) {
+                            console.log(index, runTime)
+                            return nameRef.current.dataset.value[index];
+                        }
+                        console.log("go")
+                        return alphabet[Math.floor(Math.random() * 26)];
+                    }).join("");
+
+                if (runTime >= nameRef.current.dataset.value.length) {
+                    clearInterval(interval)
+                };
+
+                runTime += 1 / 3;
+            }, 30);
+
+        }
+        console.log(nameRef)
+
+    }, [nameRef])
 
     return (
         <>
@@ -17,7 +50,7 @@ const Memoji = () => {
             <div className='name grid place-items-center '>
                 <h1>
                     <span className=' text-slate-500'>&lt;</span>
-                    <span className='david-span'>DavidMartinez</span>
+                    <span ref={nameRef} data-value="DavidMartinez" className='david-span'>DavidMartinez</span>
                     <span className=' text-slate-500'>/&gt;</span>
                 </h1>
             </div>

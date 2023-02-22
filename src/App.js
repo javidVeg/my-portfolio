@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import AboutMe from './AboutMe/AboutMe';
 import './App.css';
 import Memoji from './Memoji/Memoji';
@@ -7,11 +7,11 @@ import Footer from './Footer/Footer';
 import Technologies from './Technologies/Technologies';
 import Header from './Header/Header';
 import Challenges from './Challenges/Challenges';
+import { IoIosArrowDropupCircle } from "react-icons/io"
 
 function App() {
 
   const ghostRef = useRef(null)
-  const ghostRef2 = useRef(null)
 
   useEffect(() => {
     window.onmousemove = event => {
@@ -49,6 +49,9 @@ function App() {
         <Footer />
       </div>
       <div ref={ghostRef} id="ghost"></div>
+      <div className='fixed bottom-[50px] right-[50px] text-emerald-300 hover:text-emerald-400 z-50'>
+       <a href='#home'><IoIosArrowDropupCircle size={30}/></a>
+      </div>
     </div>
 
   );

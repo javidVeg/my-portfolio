@@ -10,15 +10,15 @@
 
 
 
-#hidden {
-display: none;
+#open {
+left: 0
 
 }
 
 .links {
 
   position: absolute;
-  left: 0px;
+  left: -100%;
   top: 80px;
   height: auto;
   width: 200px;
@@ -30,9 +30,9 @@ display: none;
   align-items: center;
   border-radius: 8px;
   z-index: 50;
-
-
+  transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 
 .Navbar .links a {
   text-decoration: none;

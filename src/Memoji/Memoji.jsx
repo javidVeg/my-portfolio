@@ -13,24 +13,24 @@ const Memoji = () => {
 
 
     useEffect(() => {
-            let runTime = 0
-            let interval = null
-            clearInterval(interval)
-            interval = setInterval(() => {
-                nameRef.current.innerText = nameRef.current.innerText.split("")
-                    .map((letter, index) => {
-                        if (index < runTime) {
-                            return nameRef.current.dataset.value[index];
-                        }
-                        return alphabet[Math.floor(Math.random() * 43)];
-                    }).join("");
+        let runTime = 0
+        let interval = null
+        clearInterval(interval)
+        interval = setInterval(() => {
+            nameRef.current.innerText = nameRef.current.innerText.split("")
+                .map((letter, index) => {
+                    if (index < runTime) {
+                        return nameRef.current.dataset.value[index];
+                    }
+                    return alphabet[Math.floor(Math.random() * 43)];
+                }).join("");
 
-                if (runTime >= nameRef.current.dataset.value.length) {
-                    clearInterval(interval)
-                };
+            if (runTime >= nameRef.current.dataset.value.length) {
+                clearInterval(interval)
+            };
 
-                runTime += 1 / 3;
-            }, 50);
+            runTime += 1 / 3;
+        }, 50);
     }, [nameRef])
 
     return (

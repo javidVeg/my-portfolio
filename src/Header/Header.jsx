@@ -7,7 +7,7 @@ const Header = () => {
 
     return (
         <div className='Navbar'>
-            <div className="links" id={!isOpen ? "hidden" : ""}>
+            <div className="links" id={isOpen ? "open" : ""}>
                 <a onClick={() => setOpen(!isOpen)} href="#home">
                     Home
                 </a>

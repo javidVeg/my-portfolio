@@ -1,10 +1,10 @@
 .main {
   width: 100%;
-  height: 100%;
+ position: relative;
   margin: 0;
   padding: 0;
   background-color: #262626;
-  overflow-y: auto;
+  overflow-y: hidden;
 
 }
 
@@ -23,8 +23,26 @@
   animation: ghost-rotate 20s ease-in-out infinite;
   filter: blur(100px);
   opacity: .5;
- 
 }
+
+.container-title{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 5vw;
+  z-index: 20;
+}
+.container-title h1 {
+ 
+  background: -webkit-linear-gradient(#eee, #8ed3ba);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
 
 @media only screen and (max-width: 760px) {
   #ghost{

@@ -88,9 +88,9 @@ const AboutMe = () => {
 
     }, [])
 
-    useEffect(() => {
+    // useEffect(() => {
 
-    }, [])
+    // }, [])
 
 
 
@@ -100,10 +100,22 @@ const AboutMe = () => {
             <div
                 ref={textRef}
                 className='left shadow-lg shadow-black'>
-                <div className='content '>
-                    <h1 className=' font-bold'>About Me</h1>
-                    <p >
-                        Innovation and creation are the two things that EXCITE me!  Saturating myself in the world of Tech and Software Development has allowed me to be part of this rapidly changing world and I could not be more grateful. For the last 12 years I have served as an infantryman in the United States Army and have traveled the world in my most recent position as a Congressional Travel Escort. For the last year I have dedicated all my spare time to learning how to code and now that my time in the Army is coming to an end, I am ready to join the work force as a Frontend Developer!
+                <div className='content flex flex-col gap-5'>
+                    <h2 className=' font-bold text-sm px-4 pt-4 md:text-base md:px-6'>About Me</h2>
+                    <p className=' text-sm  px-4 md:text-base md:px-6'>
+                    Innovation and creation ignite a passion within me that is unparalleled. Immersing myself in the ever-evolving world 
+                    of Tech and Software Development has been a rewarding journey, and I feel incredibly fortunate to be a part of it. As 
+                    a former infantryman with 11 years of service in the United States Army, I have traveled the world in my most recent 
+                    role as a Congressional Travel Escort, and have gained a unique perspective on the power of technology to connect 
+                    people across the globe. </p>
+                    <p className=' text-sm px-4 md:text-base md:px-6'>In addition to my military experience, I am also a seasoned freelance frontend developer 
+                    with 2.5 years of specialized expertise in React. My passion for building dynamic and engaging user interfaces has 
+                    enabled me to collaborate with clients from diverse industries, delivering effective and innovative solutions that 
+                    drive business growth. I am excited to continue my journey in the world of tech, bringing my skills and experience 
+                    to the forefront of the industry. </p>
+                    <p className=' text-sm px-4 md:text-base md:px-6 pb-4'>My adaptability and positive attitude make me a valuable asset to any team, and 
+                    I am confident in my ability to help them shine. I quickly grasp new concepts and adapt to changing circumstances, 
+                    delivering outstanding results in any environment.
                     </p>
                 </div>
             </div>
